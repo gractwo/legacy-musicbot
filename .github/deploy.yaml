@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build image
+        run: docker build -t ${{ github.repository }} .
+      - name: Deploy image
+        run: |
+          docker stop muzykant || true
+          docker rm muzykant || true
+          docker stop muzykant2 || true
+          docker rm muzykant2 || true
+          docker run -d -e "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN_1 }}" -e "PREFIX=";" --restart always --name muzykant ${{ github.repository }}
+          docker run -d -e "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN_2 }}" -e "PREFIX=":" --restart always --name muzykant2 ${{ github.repository }}
