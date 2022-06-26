@@ -19,5 +19,5 @@ jobs:
           docker rm muzykant || true
           docker stop muzykant2 || true
           docker rm muzykant2 || true
-          docker run -d -e "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN_1 }}" -e "PREFIX=";" --restart always --name muzykant ${{ github.repository }}
-          docker run -d -e "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN_2 }}" -e "PREFIX=":" --restart always --name muzykant2 ${{ github.repository }}
+          docker run -d -e "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN_1 }}" -e "PREFIX= ;" --restart always --name muzykant ${{ github.repository }}
+          docker run -d -e "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN_2 }}" -e "PREFIX= :" --restart always --name muzykant2 ${{ github.repository }}
