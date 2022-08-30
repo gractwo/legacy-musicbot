@@ -1,12 +1,14 @@
-# Music-bot
+<img align="left" style="width:128px" src="https://github.com/gractwo/assets/blob/master/logo.svg" />
 
-A complete code to download for a music bot 🎧
+# gractwo/legacy-musicbot
 
-Looking for a code for a music bot ? This fully open source code is made for your project !
+The software in this repository is a derivative of ZerioDev's [Music-bot](https://github.com/ZerioDev/Music-bot) codebase adjusted to our needs.
 
-If you need help with this project, to get support faster you can join the help server by just clicking [here](https://discord.gg/5cGSYV8ZZj).
+As per GPL v3.0, we state that changes to the codebase can be most easily found by checking the repo's commit history - these are mostly small adjustments the original codebase's author expected.
 
-*If you don't have any development knowledge, it is recommended to join the Discord support server to get help.*
+---
+
+---
 
 ### ⚡ Configuration
 
@@ -66,3 +68,5 @@ Realized with ❤️ by [ZerioDev](https://github.com/ZerioDev).
 Please do not withdraw the license and keep the credits on this project.
 
 To have full access to the project and to be able to withdraw the credits a small donation is accepted. 
+
+Fuckup count: 1
