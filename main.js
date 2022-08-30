@@ -1,12 +1,13 @@
 const { Player } = require("discord-player");
-const { Client, Intents } = require("discord.js");
+const { Client, GatewayIntentBits } = require("discord.js");
 
 global.client = new Client({
   intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_VOICE_STATES,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildVoiceStates,
   ],
   disableMentions: "everyone",
 });
