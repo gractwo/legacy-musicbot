@@ -1,5 +1,4 @@
 module.exports = (client, message) => {
-  bot = client.guild.member.fetch
   if (message.author.bot || message.channel.type === "dm") return;
 
   const prefix = process.env.PREFIX;
