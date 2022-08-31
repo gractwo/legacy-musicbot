@@ -1,4 +1,5 @@
 module.exports = (client, message) => {
+  bot = client.guild.member.fetch
   if (message.author.bot || message.channel.type === "dm") return;
 
   const prefix = process.env.PREFIX;
@@ -31,10 +32,10 @@ module.exports = (client, message) => {
       return message.channel.send(
         `You're not in a voice channel ${message.author}... try again ? ❌`
       );
-
+    
     if (
-      message.guild.me.voice.channel &&
-      message.member.voice.channelid !== message.guild.me.voice.channelid
+      message.guild.members.me.voice.channel &&
+      message.guild.members.voice.channelid !== message.guild.members.me.voice.channel.id
     )
       return message.channel.send(
         `You are not in the same voice channel ${message.author}... try again ? ❌`
