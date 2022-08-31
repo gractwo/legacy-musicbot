@@ -34,7 +34,7 @@ module.exports = (client, message) => {
 
     if (
       message.guild.me.voice.channel &&
-      message.member.voice.channel.id !== message.guild.me.voice.channel.id
+      message.member.voice.channelid !== message.guild.me.voice.channelid
     )
       return message.channel.send(
         `You are not in the same voice channel ${message.author}... try again ? ❌`
